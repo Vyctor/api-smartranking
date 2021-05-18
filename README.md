@@ -27,3 +27,4 @@ disponibilizar um atrativo para novos jogadores.
 # Tecnologias Utilizadas
 
 * NestJS
+* MongoDB
