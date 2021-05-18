@@ -1,4 +1,4 @@
-# Microservices em Node.js: NestJS, Typescript, RabbitMQ
+# Microservices em Node.js: NestJS, Typescript, RabbitMQ, MongoDB, AWS e Cloud Foundry
 
 ## Aplicação a ser desenvolvida
 
