@@ -8,6 +8,7 @@ import {
   UsePipes,
   ValidationPipe,
 } from '@nestjs/common';
+import { JogadoresValidacaoParametrosPipe } from './pipes/jogadores-validacao-parametros.pipe';
 import { CriarJogadorDto } from './dtos/criar-jogador.dto';
 import { Jogador } from './interfaces/jogador.interface';
 import { JogadoresService } from './jogadores.service';
@@ -25,7 +26,7 @@ export class JogadoresController {
 
   @Get()
   async consultarJogadores(
-    @Query('email') email: string,
+    @Query('email', JogadoresValidacaoParametrosPipe) email: string,
   ): Promise<Jogador[] | Jogador> {
     if (email) {
       return this.jogadoresService.consultarJogadorPorEmail(email);
@@ -35,7 +36,9 @@ export class JogadoresController {
   }
 
   @Delete()
-  async deletarJogador(@Query('email') email: string): Promise<void> {
+  async deletarJogador(
+    @Query('email', JogadoresValidacaoParametrosPipe) email: string,
+  ): Promise<void> {
     return this.jogadoresService.deletarJogador(email);
   }
 }
