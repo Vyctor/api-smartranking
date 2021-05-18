@@ -15,7 +15,7 @@ disponibilizar um atrativo para novos jogadores.
 * Acompanhar os rankings
 * Consultar seus dados e seu histórico de partidas (vitórias, derrotas, posição no ranking)
 * Consultar as informações de seus adversários (histórico de partidas e dados)
-* Ser notificado por e-mail qunado for desafiado
+* Ser notificado por e-mail quando for desafiado
 
 ### Ações disponíveis para o Administrador
 
