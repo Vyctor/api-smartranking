@@ -26,6 +26,7 @@ export class CategoriasController {
   }
 
   @Get()
+  @UsePipes(ValidationPipe)
   async consultarCategorias(): Promise<Array<Categoria>> {
     return await this.categoriasService.consultarTodasCategorias();
   }
