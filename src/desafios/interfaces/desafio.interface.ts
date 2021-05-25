@@ -1,6 +1,6 @@
 import { Document } from 'mongoose';
-import { Jogador } from '../../../dist/jogadores/interfaces/jogador.interface';
 import DesafioStatus from '../enuns/desafio-status.enum';
+import { Jogador } from '../../jogadores/interfaces/jogador.interface';
 
 export interface Desafio extends Document {
   dataHoraDesafio: Date;

@@ -51,7 +51,7 @@ export class JogadoresController {
     return await this.jogadoresService.consultarTodosJogadores();
   }
 
-  @Delete('/:id')
+  @Delete('/:_id')
   async deletarJogador(
     @Param('_id', ValidacaoParametrosPipe) _id: string,
   ): Promise<void> {

@@ -50,6 +50,22 @@ export class CategoriasService {
     return categoriaEncontrada;
   }
 
+  async consultarCategoriaDoJogador(idJogador: any): Promise<Categoria> {
+    const jogador = await this.jogadoresService.consultarJogadorPorId(
+      idJogador,
+    );
+    if (!jogador) {
+      throw new BadRequestException(
+        `O id ${idJogador} não corresponde a um jogador válido!`,
+      );
+    }
+    return await this.categoriaModel
+      .findOne()
+      .where('jogadores')
+      .in(idJogador)
+      .exec();
+  }
+
   async atualizarCategoria(
     categoria: string,
     atualizarCategoriaDto: AtualizarCategoriaDto,
