@@ -28,3 +28,12 @@ disponibilizar um atrativo para novos jogadores.
 
 * NestJS
 * MongoDB
+
+# Microservices - Entendimentos Iniciais
+
+## Benefícios
+
+- Facilitar a implementação de novas features, uma vez que teremos domínios de negócio exclusivos em cada microservice.
+- Autonomia para nossos componentes de modo que possamos desenvolver e publicar serviços de forma independente
+- Aumentar a capacidade de escalabilidade horizontal e balanceamento de carga
+- Maior resiliência / Tolerância a falhas
