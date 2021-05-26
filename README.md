@@ -27,6 +27,7 @@ disponibilizar um atrativo para novos jogadores.
 # Tecnologias Utilizadas
 
 * NestJS
+* Nest Microservices
 * MongoDB
 
 # Microservices - Entendimentos Iniciais
@@ -37,3 +38,27 @@ disponibilizar um atrativo para novos jogadores.
 - Autonomia para nossos componentes de modo que possamos desenvolver e publicar serviços de forma independente
 - Aumentar a capacidade de escalabilidade horizontal e balanceamento de carga
 - Maior resiliência / Tolerância a falhas
+
+# Nest Microservices
+
+É um subsistema integrado no Nest, que utiliza uma camada diferente de transporte, que não é HTTP, para viabilizar a 
+comunicação entre aplicações através da rede. 
+
+Seu CORE é chamado de **TRANSPORTERS**, que são responsáveis por transmitir as mensagens entre diferentes instâncias de 
+microservices, suporta nativamente os estilods de mensagem: request-response e event-based. Abstrai os detalhes de 
+implementação de cada transporter atrás de uma interface canônica.
+
+**Transporter Broker-based**: Redis, NATS, RabbitMQ, MQTT, e Kafka
+  Permite descoplar vários componentes da aplicação. Cada componente somente precisa se conectar ao broker, e pode permanecer
+  sem necessidade de conhecer a existência, localização ou detalhes da implementação de outros componentes.
+  A única coisa que precisa ser compartilhada entre os componentes é o protocolo de mensagens.
+
+Um broker se divide em:
+  - Broker Server: Processo do lado servidor, responsável por gerenciar a publicação, assinatura e entrega das 
+  mensagens aos clientes
+  - Broker client API: É disponibilizado em um package específico para cada linguagem, fornecendo uma API para acessar
+  o broker, a partir de aplicações clientes.
+
+**Point-to-point**: TCP E gRPC
+
+
