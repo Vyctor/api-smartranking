@@ -23,13 +23,13 @@ disponibilizar um atrativo para novos jogadores.
 - Cadastrar jogadores e definir suas categorias
 - Ser notificado quando existir um desafio pendente a mais de 10 dias.
 
-# Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - NestJS
 - Nest Microservices
 - MongoDB
 
-# Microservices - Entendimentos Iniciais
+## Microservices - Entendimentos Iniciais
 
 ## Benefícios
 
@@ -38,7 +38,7 @@ disponibilizar um atrativo para novos jogadores.
 - Aumentar a capacidade de escalabilidade horizontal e balanceamento de carga
 - Maior resiliência / Tolerância a falhas
 
-# Nest Microservices
+## Nest Microservices
 
 É um subsistema integrado no Nest, que utiliza uma camada diferente de transporte, que não é HTTP, para viabilizar a
 comunicação entre aplicações através da rede.
